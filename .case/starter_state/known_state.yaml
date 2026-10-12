@@ -1,3 +1,6 @@
+failing_tests:
+  - "AppTest > GET health returns HTTP 200"
+  - "AppTest > GET health returns status ok as application-json"
 known_errors:
   - type: missing_health_endpoint
     description: "GET /health does not yet provide the requested successful JSON health response."

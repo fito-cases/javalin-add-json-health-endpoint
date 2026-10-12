@@ -4,7 +4,7 @@ artifacts:
     description: "Application routes and handlers for the users service and requested health endpoint."
   - path: src/test/kotlin/com/fito/cases/jsonendpoint/AppTest.kt
     role: evidence
-    description: "Existing users behavior tests; health-response checks will be added during source work."
+    description: "Tests for the users behavior, which pass, and for the requested health response, which fail until the endpoint exists."
   - path: build.gradle.kts
     role: scaffold
     description: "Kotlin/Javalin dependencies and the project's test configuration."
