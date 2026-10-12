@@ -1,3 +1,3 @@
 branch: case/solution-v1.0.0
 visibility: post_completion
-notes: "Exemplar adds the JSON health endpoint while preserving the users API; build its branch during source work."
+notes: "The exemplar adds the JSON health endpoint and keeps the users API as it is."
