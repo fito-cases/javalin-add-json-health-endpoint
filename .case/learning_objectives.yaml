@@ -1,0 +1,9 @@
+learning_objectives:
+  - knowledge_component: execution-fact:javalin.configroutesget-dispatches-matching-get-requests-to-its-handler
+    bloom_level: APPLICATION
+    description: "Add a GET endpoint to the existing Javalin service for a health response."
+    weight: primary
+  - knowledge_component: execution-fact:javalin.contextjson-marks-the-http-response-as-json
+    bloom_level: APPLICATION
+    description: "Produce a health response with a JSON body and media type."
+    weight: primary

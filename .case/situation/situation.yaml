@@ -1,0 +1,4 @@
+documents:
+  - file: 01_intro.md
+    title: Health check request
+    format: ticket

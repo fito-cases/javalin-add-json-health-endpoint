@@ -1,0 +1,9 @@
+prerequisites:
+  - knowledge_component: concept:javalin.http-endpoint
+    bloom_level: COMPREHENSION
+    description: "The method-and-path contract of an HTTP endpoint."
+    mandatory: true
+  - knowledge_component: concept:javalin.json-serialization
+    bloom_level: COMPREHENSION
+    description: "How in-memory values become a JSON response representation."
+    mandatory: true

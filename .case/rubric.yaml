@@ -1,0 +1,45 @@
+criteria:
+  - id: health-route
+    title: Health GET route serves the requested path
+    knowledge_component: execution-fact:javalin.configroutesget-dispatches-matching-get-requests-to-its-handler
+    bloom_level: APPLICATION
+    weight: 55
+    levels:
+      - score: 0
+        label: Not achieved
+        description: "No working GET /health route is added to the application."
+      - score: 1
+        label: Partial
+        description: "A health route is attempted, but GET /health does not return the required successful response."
+      - score: 2
+        label: Achieved
+        description: "The implemented GET /health route returns HTTP 200, and the existing users-route tests pass."
+      - score: 3
+        label: Exemplary
+        description: "The implemented GET /health route returns HTTP 200; a focused passing test covers its behavior and the existing users-route tests still pass."
+    evaluation_method:
+      type: automated
+      command: ./gradlew test
+      passing_condition: "The health-route status test and the existing users-route tests pass."
+  - id: health-json-response
+    title: Health response is valid JSON with the required media type
+    knowledge_component: execution-fact:javalin.contextjson-marks-the-http-response-as-json
+    bloom_level: APPLICATION
+    weight: 45
+    levels:
+      - score: 0
+        label: Not achieved
+        description: "GET /health does not return a usable JSON health response."
+      - score: 1
+        label: Partial
+        description: "The implemented response attempts JSON, but its body, status value, or media type does not meet the contract."
+      - score: 2
+        label: Achieved
+        description: "The implemented GET /health response has a parseable JSON object with status 'ok' and a Content-Type identifying application/json."
+      - score: 3
+        label: Exemplary
+        description: "The implemented response meets the same JSON contract, with a focused passing test verifying its fields and media type without relying on incidental formatting."
+    evaluation_method:
+      type: automated
+      command: ./gradlew test
+      passing_condition: "The health-response tests for the JSON status field and application/json media type pass."

@@ -1,0 +1,4 @@
+known_errors:
+  - type: missing_health_endpoint
+    description: "GET /health does not yet provide the requested successful JSON health response."
+build_status: passing

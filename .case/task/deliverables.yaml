@@ -1,0 +1,7 @@
+deliverables:
+  - type: code_change
+    path: src/main/kotlin/com/fito/cases/jsonendpoint/App.kt
+    description: "A working JSON health endpoint in the existing service."
+  - type: tests_passing
+    target: ./gradlew test
+    description: "The health contract and existing users behavior pass the project test suite."
