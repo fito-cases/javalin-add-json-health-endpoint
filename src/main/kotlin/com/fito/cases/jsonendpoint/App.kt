@@ -26,6 +26,7 @@ fun getUser(ctx: Context) {
 fun createApp(): Javalin =
     Javalin.create { config ->
         config.routes.get("/users/{id}", ::getUser)
+        config.routes.get("/health") { ctx -> ctx.json(mapOf("status" to "ok")) }
     }
 
 fun main() {
